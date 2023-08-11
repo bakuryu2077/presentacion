@@ -1,0 +1,252 @@
+@import url('estilo_botones.css');
+@import url('estilo_modal_pagina.css');
+@import url('estilo_btn_pagina.css');
+
+
+:root{
+    --color-texto:#000;
+    --color-fondo:#fff;
+    --color-cabecera:red;
+    --color-cuerpo:yellow;
+    --color-pie:orange;
+
+    --color-botones:#f7de39;
+    --color-area:#ffffff;
+}
+
+*{
+    padding:0;
+    margin:0;
+
+    box-sizing: border-box;
+}
+
+body{
+    width:100vw;
+    height:500vh;
+}
+
+.contenedor{
+    width:100%;
+    height:100%;
+
+    padding-left:2%;
+
+    background-color: var(--color-fondo);
+
+    display: grid;
+    grid-template-columns: 98%;
+    grid-template-rows: 8% 86% 5%;
+    grid-template-areas: 
+        'caja1'
+        'caja2'
+        'caja3'
+    ;
+
+    row-gap:0.5rem;
+
+}
+
+.cabecera{
+    grid-area: caja1;
+    background-color: var(--color-cabecera);
+   
+    display:flex;
+
+    place-content: space-around;
+    place-items: center;
+   
+    border-radius: 10px;
+}
+.cuerpo{
+    grid-area:caja2; 
+
+    display:grid;
+    grid-template-columns: 25% 75%;
+    grid-template-rows: 100%;
+    grid-template-areas: 'botones area';
+
+}
+
+.botonera{
+    grid-area:botones;
+    background-color: var(--color-botones);
+ 
+
+    display:flex;
+    flex-direction: column;
+
+    row-gap: 1.5rem;
+    place-content: top;
+    align-items: center;
+
+    border-radius:15px;
+
+    padding-top: 10vh;
+}
+
+.info{
+    grid-area: area;
+    background-color: var(--color-fondo);
+
+    display:grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 5% 35% 15% 18%;
+    grid-template-areas: 
+        'cajaT'
+        'cajaTx'
+        'cajaBtn'
+        'cajaImg'
+    ;
+
+    row-gap:1px; 
+
+    place-content:top;
+    place-items: top;
+
+
+    font-family: 'Preahvihear', sans-serif;
+    text-align: center;
+
+
+}
+
+.innerTitles{
+    grid-area:cajaT;
+
+    margin-top: 5vh;
+    font-family: 'Preahvihear', sans-serif;
+    color: rgb(177, 0, 0);
+    font-size: 1.2rem;
+    font-weight: 700;
+    font-style: bold;
+
+    text-shadow: 1px 2px 3px #000;
+}
+.content1{
+
+    grid-area: cajaTx;
+    padding-left: 2vw;
+    padding-right: 2vw;
+
+}
+
+.content2{
+    grid-area:cajaBtn;
+
+    margin-top:10vh;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+
+    row-gap:0.5rem;
+
+    place-content: center;
+    place-items: center;
+
+
+}
+
+.content3{
+    grid-area:cajaImg;
+
+    display:flex;
+    flex-direction: column;    
+    row-gap:0.3rem;
+
+}
+
+.carousel {
+    max-width: 800px;
+    margin: 0 auto;
+    
+    display: flex;
+   
+    gap:0.5rem;
+    
+    place-content: center;
+    place-items: center;   
+    
+}
+
+.imagen {
+    width: 500px;
+    height: 700px;
+    background-size: 100% 100%;
+}
+
+.pie{
+    grid-area:caja3;
+    background-color: var(--color-pie);
+    
+    display:flex;
+
+    place-content: space-around;
+    place-items:center;
+
+    border-radius:15px;
+
+}
+
+.datos{
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+
+    font-family: 'Preahvihear', sans-serif;
+    font-size: 1.3rem;
+    font-weight: 200;
+
+    color:#410000;
+
+}
+
+.texto{
+    font-family: 'Preahvihear', sans-serif;
+    font-size: 1rem;
+    font-weight: 200;
+
+    color:#410000;
+    text-shadow: 1px 1px 2px #000;
+}
+
+.titulos{
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+    font-family: 'Preahvihear', sans-serif;
+    color: yellow;
+    font-size: 1.5rem;
+    font-weight: 700;
+    font-style: bold;
+
+    text-shadow: 1px 2px 3px #fff;
+}
+
+.imgs{
+    width:110px; 
+    height:110px;
+
+    border-radius:90%;
+    box-shadow: 4px 4px rgb(33, 0, 0);
+
+}
+
+.central{
+    width:500px;
+    height:420px;
+
+    box-shadow: 15px 15px 10px rgba(0, 0, 0, 0.8);
+}
+
+.central_1{
+    width:450px;
+    height:620px;
+
+    box-shadow: 15px 15px 10px rgba(0, 0, 0, 0.8);
+}
